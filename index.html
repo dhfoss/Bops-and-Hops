@@ -24,26 +24,39 @@
         </div>
     </div>
 
-    <!-- app description with search boxes -->
+    <!-- app instructions/description with search boxes and buttons -->
     <div class="uk-container">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-            commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-            anim id est laborum.</p>
-        <form class="uk-search">
-            <input class="uk-search-input" type="search" placeholder="Artist">
-        </form>
-        <form class="uk-search">
-            <input class="uk-search-input" type="search" placeholder="Genre">
-        </form>
-        <form class="uk-search">
-            <input class="uk-search-input" type="search" placeholder="Spirit">
-        </form>
-        <form class="uk-search">
-            <input class="uk-search-input" type="search" placeholder="Alcoholic/NonAlcoholic">
-        </form>
-
+        <p>I must not fear. Fear is the mind-killer. Fear is the little death that brings total obliteration. I will
+            face my fear. I will permit it to pass over me and through me. And when it has gone past I will turn the
+            inner eye to see its path. Where the fear had gone, there will be nothing. Only I will remain.</p>
+        <!-- Artist search -->
+        <div>
+            <form class="uk-search">
+                <input class="uk-search-input" type="search" placeholder="Artist">
+            </form>
+            <button class="uk-button uk-button-default">Search</button>
+        </div>
+        <!-- Genre search -->
+        <div>
+            <form class="uk-search">
+                <input class="uk-search-input" type="search" placeholder="Genre">
+            </form>
+            <button class="uk-button uk-button-default">Search</button>
+        </div>
+        <!-- Alcohol search -->
+        <div>
+            <form class="uk-search">
+                <input class="uk-search-input" type="search" placeholder="Spirit">
+            </form>
+            <button class="uk-button uk-button-default">Search</button>
+        </div>
+        <!-- Alcohol or nonalcohol search parameter -->
+        <div>
+            <form class="uk-search">
+                <input class="uk-search-input" type="search" placeholder="Alcoholic/NonAlcoholic">
+            </form>
+            <button class="uk-button uk-button-default">Search</button>
+        </div>
     </div>
 
     <!-- cards for previously searched drinks -->
@@ -57,6 +70,53 @@
         <div id="recipe3" class="uk-card uk-card-body">
             <h3 class="uk-card-title">Drink 3</h3>
         </div>
+    </div>
+
+    <!-- Modal that will pop up with results of search containing drink recipe and artist info -->
+    <a class="uk-button uk-button-default" href="#modal-sections" uk-toggle>Open</a>
+
+    <div id="modal-sections" uk-modal>
+        <div class="uk-modal-dialog">
+            <button class="uk-modal-close-default" type="button" uk-close></button>
+            <div class="uk-modal-header">
+                <h2 class="uk-modal-title">Results</h2>
+            </div>
+            <div class="uk-modal-body">
+                <p>This day is called the feast of Crispian:
+                    He that outlives this day, and comes safe home,
+                    Will stand a tip-toe when the day is named,
+                    And rouse him at the name of Crispian.
+                    He that shall live this day, and see old age,
+                    Will yearly on the vigil feast his neighbours,
+                    And say ‘To-morrow is Saint Crispian:’
+                    Then will he strip his sleeve and show his scars.
+                    And say ‘These wounds I had on Crispin’s day.’
+                    Old men forget: yet all shall be forgot,
+                    But he’ll remember with advantages
+                    What feats he did that day: then shall our names.
+                    Familiar in his mouth as household words
+                    Harry the king, Bedford and Exeter,
+                    Warwick and Talbot, Salisbury and Gloucester,
+                    Be in their flowing cups freshly remember’d.
+                    This story shall the good man teach his son;
+                    And Crispin Crispian shall ne’er go by,
+                    From this day to the ending of the world,
+                    But we in it shall be remember’d;
+                    We few, we happy few, we band of brothers;
+                    For he to-day that sheds his blood with me
+                    Shall be my brother; be he ne’er so vile,
+                    This day shall gentle his condition:
+                    And gentlemen in England now a-bed
+                    Shall think themselves accursed they were not here,
+                    And hold their manhoods cheap whiles any speaks
+                    That fought with us upon Saint Crispin’s day.</p>
+            </div>
+            <div class="uk-modal-footer uk-text-right">
+                <button class="uk-button uk-button-default uk-modal-close" type="button">Cancel</button>
+                <button class="uk-button uk-button-primary" type="button">Save</button>
+            </div>
+        </div>
+    </div>
     </div>
 
     <!-- JavaScript/jQuery CDN for UiKit -->
