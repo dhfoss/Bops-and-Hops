@@ -29,35 +29,55 @@
         <p>I must not fear. Fear is the mind-killer. Fear is the little death that brings total obliteration. I will
             face my fear. I will permit it to pass over me and through me. And when it has gone past I will turn the
             inner eye to see its path. Where the fear had gone, there will be nothing. Only I will remain.</p>
-            <img id="artist-picture">
-            <img id="booze-picture">
+        <img id="artist-picture">
+        <img id="booze-picture">
         <!-- Artist search -->
         <div>
-            <form class="uk-search" id="artist">
-                <input class="uk-search-input" type="search" placeholder="Artist">
-                <button class="uk-button uk-button-default" type="submit">Search</button>
+            <form>
+                <input class="uk-input uk-width-1-2" type="text" placeholder="Artist">
             </form>
-        </div>
-        <!-- Genre search -->
-        <div>
-            <form class="uk-search">
-                <input class="uk-search-input" type="search" placeholder="Genre">
-                <button class="uk-button uk-button-default" type="submit">Search</button>
-            </form>
-        </div>
-        <!-- Alcohol search -->
-        <div>
-            <form class="uk-search" id="booze">
-                <input class="uk-search-input" type="search" placeholder="Spirit">
-                <button class="uk-button uk-button-default" type="submit">Search</button>
-            </form>
-        </div>
-        <!-- Alcohol or nonalcohol search parameter -->
-        <div>
-            <form class="uk-search">
-                <input class="uk-search-input" type="search" placeholder="Alcoholic/NonAlcoholic">
-                <button class="uk-button uk-button-default" type="submit">Search</button>
-            </form>
+            <button class="uk-button uk-button-default" type="button">Drinks</button>
+            <div class="uk-width-large" uk-dropdown>
+                <div class="uk-dropdown-grid uk-child-width-1-2@m" uk-grid>
+                    <div>
+                        <ul class="uk-nav uk-dropdown-nav">
+                            <li class="uk-active"><a href="#">Alcohol</a></li>
+                            <li><a href="#">Vodka</a></li>
+                            <li><a href="#">Gin</a></li>
+                            <li><a href="#">Scotch Whiskey</a></li>
+                            <li><a href="#">Irish Whiskey</a></li>
+                            <li><a href="#">Burbon Whiskey</a></li>
+                            <li><a href="#">Rum</a></li>
+                            <li><a href="#">Brandy</a></li>
+                            <li><a href="#">Tequila</a></li>
+                            <li><a href="#">Absinthe</a></li>
+                            <li><a href="#">Schnapps</a></li>
+                            <li><a href="#">Ouzo</a></li>
+                            <li><a href="#">Grappa</a></li>
+                            <li><a href="#">Sake</a></li>
+                            <li><a href="#">Cognac</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <ul class="uk-nav uk-dropdown-nav">
+                            <li class="uk-active"><a href="#">Non Alcohol</a></li>
+                            <li><a href="#">Pop/Soda</a></li>
+                            <li><a href="#">Apple Juice</a></li>
+                            <li><a href="#">Orange Juice</a></li>
+                            <li><a href="#">Grape Juice</a></li>
+                            <li><a href="#">Pomegranate Juice</a></li>
+                            <li><a href="#">Lemonade</a></li>
+                            <li><a href="#">Milk</a></li>
+                            <li><a href="#">Chocolate Milk</a></li>
+                            <li><a href="#">Tomato Juice</a></li>
+                            <li><a href="#">Beet Juice</a></li>
+                            <li><a href="#">Prune Juice</a></li>
+                            <li><a href="#">Water</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <button class="uk-button uk-button-default" type="submit">Results</button>
         </div>
     </div>
 
@@ -72,35 +92,15 @@
         <div id="recipe2" class="uk-card uk-card-body">
             <h3 class="uk-card-title">Drink 2</h3>
             <ul>
-                
+
             </ul>
         </div>
         <div id="recipe3" class="uk-card uk-card-body">
             <h3 class="uk-card-title">Drink 3</h3>
             <ul>
-                
+
             </ul>
         </div>
-    </div>
-
-    <!-- Modal that will pop up with results of search containing drink recipe and artist info -->
-    <a class="uk-button uk-button-default" href="#modal-sections" uk-toggle>Open</a>
-
-    <div id="modal-sections" uk-modal>
-        <div class="uk-modal-dialog">
-            <button class="uk-modal-close-default" type="button" uk-close></button>
-            <div class="uk-modal-header">
-                <h2 class="uk-modal-title">Results</h2>
-            </div>
-            <div class="uk-modal-body">
-                <p></p>
-            </div>
-            <div class="uk-modal-footer uk-text-right">
-                <button class="uk-button uk-button-default uk-modal-close" type="button">Cancel</button>
-                <button class="uk-button uk-button-primary" type="button">Save</button>
-            </div>
-        </div>
-    </div>
     </div>
 
     <!-- JavaScript/jQuery CDN for UiKit -->
@@ -108,7 +108,7 @@
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.9/dist/js/uikit.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.9/dist/js/uikit-icons.min.js"></script>
     <script src="script.js"></script>
-    
+
 </body>
 
 </html>
