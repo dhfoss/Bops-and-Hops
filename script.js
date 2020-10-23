@@ -6,7 +6,7 @@ var artist;
 $('#booze').on('submit', function(e) {
     e.preventDefault();
     alcohol = $(this).children('input').val().trim();
-
+    console.log(alcohol);
     drinkDisplay(alcohol);
     $('input').val('');
 })

@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.5.9/dist/css/uikit.min.css" />
 
     <!-- CDN for Fontawesome -->
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <!--<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">-->
 
     <link rel="stylesheet" href="style.css">
 </head>
@@ -29,33 +29,35 @@
         <p>I must not fear. Fear is the mind-killer. Fear is the little death that brings total obliteration. I will
             face my fear. I will permit it to pass over me and through me. And when it has gone past I will turn the
             inner eye to see its path. Where the fear had gone, there will be nothing. Only I will remain.</p>
+            <img id="artist-picture">
+            <img id="booze-picture">
         <!-- Artist search -->
         <div>
-            <form class="uk-search">
+            <form class="uk-search" id="artist">
                 <input class="uk-search-input" type="search" placeholder="Artist">
+                <button class="uk-button uk-button-default" type="submit">Search</button>
             </form>
-            <button class="uk-button uk-button-default">Search</button>
         </div>
         <!-- Genre search -->
         <div>
             <form class="uk-search">
                 <input class="uk-search-input" type="search" placeholder="Genre">
+                <button class="uk-button uk-button-default" type="submit">Search</button>
             </form>
-            <button class="uk-button uk-button-default">Search</button>
         </div>
         <!-- Alcohol search -->
         <div>
-            <form class="uk-search">
+            <form class="uk-search" id="booze">
                 <input class="uk-search-input" type="search" placeholder="Spirit">
+                <button class="uk-button uk-button-default" type="submit">Search</button>
             </form>
-            <button class="uk-button uk-button-default">Search</button>
         </div>
         <!-- Alcohol or nonalcohol search parameter -->
         <div>
             <form class="uk-search">
                 <input class="uk-search-input" type="search" placeholder="Alcoholic/NonAlcoholic">
+                <button class="uk-button uk-button-default" type="submit">Search</button>
             </form>
-            <button class="uk-button uk-button-default">Search</button>
         </div>
     </div>
 
@@ -63,12 +65,21 @@
     <div uk-grid>
         <div id="recipe1" class="uk-card uk-card-body">
             <h3 class="uk-card-title">Drink 1</h3>
+            <ul>
+
+            </ul>
         </div>
         <div id="recipe2" class="uk-card uk-card-body">
             <h3 class="uk-card-title">Drink 2</h3>
+            <ul>
+                
+            </ul>
         </div>
         <div id="recipe3" class="uk-card uk-card-body">
             <h3 class="uk-card-title">Drink 3</h3>
+            <ul>
+                
+            </ul>
         </div>
     </div>
 
@@ -93,8 +104,11 @@
     </div>
 
     <!-- JavaScript/jQuery CDN for UiKit -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.9/dist/js/uikit.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.9/dist/js/uikit-icons.min.js"></script>
+    <script src="script.js"></script>
+    
 </body>
 
 </html>
