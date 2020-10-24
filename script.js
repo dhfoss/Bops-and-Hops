@@ -2,6 +2,7 @@ var alcohol;
 var artist;
 var drink;
 
+//reloadBopsAndHops();
 
 $('#booze').on('submit', function(e) {
     e.preventDefault();
@@ -60,6 +61,13 @@ $('#artist').on('submit', function(e) {
     $('input').val('');
 })
 
+/* IMPLEMENT WHEN ARTIST AND ALCOHOL ARE UNDER ONE BUTTON CLICK 
+//Saving previous search to Local Storage
+function saveBopsAndHops() {
+    localStorage.setItem("currentAlcohol", JSONstringify(alcohol));
+    localStorage.setItem("currentArtist", JSONstringify(artist));
+}*/
+
 
 // Audio DB function
 function artistDisplay(artist) {
@@ -87,3 +95,15 @@ function artistDisplay(artist) {
         })
     });
 }
+
+/* Should be implemented when one button click submits both artist and alcohol - reloads local storage and runs function
+function reloadBopsAndHops() {
+    var storedArtist = localStorage.getItem("currentArtist");
+    var storedAlcohol = localStorage.getItem("currentAlcohol");
+    if (storedArtist !==  null && stored Alcohol !== null){
+        alcohol = JSON.parse(storedAlcohol);
+        artist = JSON.parse(storedArtist);
+        drinkDisplay();
+        artistDisplay();
+    }
+}*/
