@@ -7,6 +7,8 @@ reloadBopsAndHops();
 $('form').on('submit', function(e) {
     e.preventDefault();
     alcohol = $('#beverageInput').val().trim();
+    $('#artist-picture').removeAttr('src');
+    $('#booze-picture').removeAttr('src');
     for (i = 0; i < 4; i++) {
         $('#recipe' + i).children('ul').empty();
         $('#recipe' + i).children('h3').empty();
@@ -14,12 +16,11 @@ $('form').on('submit', function(e) {
     for (i = 0; i < 4; i++) {
         drinkDisplay(alcohol, i);
     }
-    artist = $('#artistInput').val();
+    artist = $('#artistInput').val().trim();
     artistDisplay(artist);
     $('input').val('');
 
     saveBopsAndHops();
-
 })
 
 
