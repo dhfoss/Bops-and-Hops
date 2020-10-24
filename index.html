@@ -26,9 +26,8 @@
 
     <!-- app instructions/description with search boxes and buttons -->
     <div id="recipe0" class="uk-container">
-        <p>I must not fear. Fear is the mind-killer. Fear is the little death that brings total obliteration. I will
-            face my fear. I will permit it to pass over me and through me. And when it has gone past I will turn the
-            inner eye to see its path. Where the fear had gone, there will be nothing. Only I will remain.</p>
+        <p>Welcome to Bops & Hops – the app that pairs good drinks with good music! Enter the artist of your choice and
+            select whiskey, gin, bourbon, ouzo, vodka, or non-alcohol for your beverage. </p>
         <img id="artist-picture">
         <img id="booze-picture">
         <h3 class="uk-card-title"></h3>
@@ -42,6 +41,18 @@
                 <input id="beverageInput" class="uk-input uk-width-1-2" type="text" placeholder="Beverage">
                 <button class="uk-button uk-button-default" type="submit">Results</button>
             </form>
+
+            <!-- modal to appear when user fails to input both artist and beverage searches -->
+            <div id="modal-example" uk-modal>
+                <div class="uk-modal-dialog uk-modal-body">
+                    <h2 class="uk-modal-title">Alert!</h2>
+                    <p>Please enter both an artist and beverage for best results.</p>
+                    <p class="uk-text-right">
+                        <button class="uk-button uk-button-default uk-modal-close" type="button">Ok</button>
+                    </p>
+                </div>
+            </div>
+
             <!-- <button class="uk-button uk-button-default" type="button">Drinks</button>
             <div class="uk-width-large" uk-dropdown>
                 <div class="uk-dropdown-grid uk-child-width-1-2@m" uk-grid>
