@@ -11,7 +11,7 @@
     <!-- CDN for Fontawesome -->
     <!--<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">-->
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/style.css">
 </head>
 
 <body>
@@ -25,12 +25,16 @@
     </div>
 
     <!-- app instructions/description with search boxes and buttons -->
-    <div class="uk-container">
+    <div id="recipe0" class="uk-container">
         <p>I must not fear. Fear is the mind-killer. Fear is the little death that brings total obliteration. I will
             face my fear. I will permit it to pass over me and through me. And when it has gone past I will turn the
             inner eye to see its path. Where the fear had gone, there will be nothing. Only I will remain.</p>
         <img id="artist-picture">
         <img id="booze-picture">
+        <h3 class="uk-card-title"></h3>
+        <ul>
+
+        </ul>
         <!-- Artist search -->
         <div>
             <form>
@@ -41,46 +45,28 @@
                 <div class="uk-dropdown-grid uk-child-width-1-2@m" uk-grid>
                     <div>
                         <ul class="uk-nav uk-dropdown-nav">
-                            <li class="uk-active"><a href="#">Alcohol</a></li>
+                            <li class="uk-active"><a href="#">Beverages</a></li>
                             <li><a href="#">Vodka</a></li>
                             <li><a href="#">Gin</a></li>
                             <li><a href="#">Scotch Whiskey</a></li>
                             <li><a href="#">Irish Whiskey</a></li>
                             <li><a href="#">Burbon Whiskey</a></li>
                             <li><a href="#">Rum</a></li>
-                            <li><a href="#">Brandy</a></li>
-                            <li><a href="#">Tequila</a></li>
-                            <li><a href="#">Absinthe</a></li>
-                            <li><a href="#">Schnapps</a></li>
-                            <li><a href="#">Ouzo</a></li>
-                            <li><a href="#">Grappa</a></li>
-                            <li><a href="#">Sake</a></li>
-                            <li><a href="#">Cognac</a></li>
                         </ul>
                     </div>
-                    <div>
-                        <ul class="uk-nav uk-dropdown-nav">
-                            <li class="uk-active"><a href="#">Non Alcohol</a></li>
-                            <li><a href="#">Pop/Soda</a></li>
-                            <li><a href="#">Apple Juice</a></li>
-                            <li><a href="#">Orange Juice</a></li>
-                            <li><a href="#">Grape Juice</a></li>
-                            <li><a href="#">Pomegranate Juice</a></li>
-                            <li><a href="#">Lemonade</a></li>
-                            <li><a href="#">Milk</a></li>
-                            <li><a href="#">Chocolate Milk</a></li>
-                            <li><a href="#">Tomato Juice</a></li>
-                            <li><a href="#">Beet Juice</a></li>
-                            <li><a href="#">Prune Juice</a></li>
-                            <li><a href="#">Water</a></li>
-                        </ul>
-                    </div>
+                    <ul class="uk-nav uk-dropdown-nav">
+                        <li class="uk-active"><a href="#">Non Alcohol</a></li>
+                        <li><a href="#">Brandy</a></li>
+                        <li><a href="#">Tequila</a></li>
+                        <li><a href="#">Ouzo</a></li>
+                        <li><a href="#">Non Alcohol</a></li>
+                    </ul>
                 </div>
             </div>
-            <button class="uk-button uk-button-default" type="submit">Results</button>
         </div>
+        <button class="uk-button uk-button-default" type="submit">Results</button>
     </div>
-
+    </div>
     <!-- cards for previously searched drinks -->
     <div uk-grid>
         <div id="recipe1" class="uk-card uk-card-body">
