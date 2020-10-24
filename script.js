@@ -1,72 +1,55 @@
 var alcohol;
 var artist;
-
+var drink;
 
 
 $('#booze').on('submit', function(e) {
     e.preventDefault();
     alcohol = $(this).children('input').val().trim();
-    console.log(alcohol);
-    drinkDisplay(alcohol);
+
+    for (i = 1; i < 4; i++) {
+        $('#recipe' + i).children('ul').empty();
+        $('#recipe' + i).children('h3').empty();
+    }
+    for (i = 1; i < 4; i++) {
+        drinkDisplay(alcohol, i);
+    }
     $('input').val('');
 })
 
 
-
-
-
-
-function drinkDisplay(alcohol) {
+function drinkDisplay(alcohol, j) {
    
     // Cocktail (Favorite Alcolhol/Spirit)
+
     $.ajax ({
         url: 'https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=' + alcohol,
         method: 'GET'
     }).then(function(response) {
+
         var num = Math.floor(Math.random() * response.drinks.length);
-        var drink = response.drinks[num].strDrink;
-        console.log(drink);
-
+        drink = response.drinks[num].strDrink;
+        $('#recipe' + j).children('h3').text(drink);
         var imgSrc = response.drinks[num].strDrinkThumb;
-        $('#booze-picture').attr('src', imgSrc);
-
+        $.ajax ({
+            url: 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s=' + drink + '&list.php?i=list',
+            method: 'GET'
+        }).then(function(response) {
+            var ingridentArray = Object.values(response.drinks[0]);
+                for (i = 21; i < 36; i++) {
+                    if (ingridentArray[i] && ingridentArray[i+15]) {
+                        $('<li>').text(ingridentArray[i+15] + " " + ingridentArray[i]).appendTo($('#recipe' + j).children('ul'));
+                    }
+                    else if (ingridentArray[i]) {
+                        $('<li>').text(ingridentArray[i]).appendTo($('#recipe' + j).children('ul'));
+                    }
+                }
+        });
     });
-
-    // This is for looking up the specific drink above
-    $.ajax ({
-        url: 'https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=' + drink,
-        method: 'GET'
-    }).then(function(response) {
-        for (i=0; i<4; i++) {
-            $('#drinkName'+i).text(drink);                    //The id needs to be defined 
-            for (i=1; i<16; i++){
-                var ingredient = response.drinks[0].strIngredient + i;
-                
-                console.log(ingredient);
-                if(ingredient) {
-                    $("<li>").text(ingredient).appendTo("ul");       //Ingredient ul column
-
-                }
-            
-            }   
-
-
-            for (i=1; i<16; i++){
-                var measure = response.drinks[0].strMeasure + i;
-                
-                console.log(measure);
-                if(measure) {
-                    $("<li>").text(measure).appendTo("ul");       //Measure ul column
-
-                }
-            
-            }   
-        }
-        
-    }
-    )
 }
 
+// ==========================================
+// Artist
 
 
 $('#artist').on('submit', function(e) {
@@ -100,8 +83,6 @@ function artistDisplay(artist) {
                     $('#artist-picture').attr('src', imgSrc);
                 })
             }
-
-
             $('#artist-picture').attr('src', imgSrc);
         })
     });
