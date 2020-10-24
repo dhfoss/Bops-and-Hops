@@ -7,11 +7,12 @@ $('#booze').on('submit', function(e) {
     e.preventDefault();
     alcohol = $(this).children('input').val().trim();
 
-    for (i = 1; i < 4; i++) {
+    for (i = 0; i < 4; i++) {
         $('#recipe' + i).children('ul').empty();
         $('#recipe' + i).children('h3').empty();
+        $('#booze-picture').attr('src', '');
     }
-    for (i = 1; i < 4; i++) {
+    for (i = 0; i < 4; i++) {
         drinkDisplay(alcohol, i);
     }
     $('input').val('');
@@ -31,6 +32,13 @@ function drinkDisplay(alcohol, j) {
         drink = response.drinks[num].strDrink;
         $('#recipe' + j).children('h3').text(drink);
         var imgSrc = response.drinks[num].strDrinkThumb;
+            if (j === 0) {
+                $('#booze-picture').attr('src', imgSrc);
+                $('#recipe' + j).attr('value', imgSrc);
+            } else {
+                $('#recipe' + j).attr('value', imgSrc);
+            }
+
         $.ajax ({
             url: 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s=' + drink + '&list.php?i=list',
             method: 'GET'
@@ -48,9 +56,24 @@ function drinkDisplay(alcohol, j) {
     });
 }
 
-// ==========================================
-// Artist
+// Event Listener that swaps the info in the card with the main drink
+$('.uk-card').on('click', function(e) {
+    var cardImg = $(this).attr('value');
+    var cardh3 = $(this).children('h3').text();
+    var cardul = $(this).children('ul').html();
 
+    $(this).attr('value', $('#booze-picture').attr('src')  )
+    $(this).children('h3').text($('#recipe0').children('h3').text())
+    $(this).children('ul').html($('#recipe0').children('ul').html())
+
+    $('#booze-picture').attr('src', cardImg);
+    $('#recipe0').children('h3').text(cardh3);
+    $('#recipe0').children('ul').html(cardul);
+})
+
+//========
+// Artist
+//========
 
 $('#artist').on('submit', function(e) {
     e.preventDefault();
