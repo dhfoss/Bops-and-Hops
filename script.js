@@ -2,20 +2,24 @@ var alcohol;
 var artist;
 var drink;
 
-//reloadBopsAndHops();
+reloadBopsAndHops();
 
-$('#booze').on('submit', function(e) {
+$('form').on('submit', function(e) {
     e.preventDefault();
-    alcohol = $(this).children('input').val().trim();
-
-    for (i = 1; i < 4; i++) {
+    alcohol = $('#beverageInput').val().trim();
+    for (i = 0; i < 4; i++) {
         $('#recipe' + i).children('ul').empty();
         $('#recipe' + i).children('h3').empty();
     }
-    for (i = 1; i < 4; i++) {
+    for (i = 0; i < 4; i++) {
         drinkDisplay(alcohol, i);
     }
+    artist = $('#artistInput').val();
+    artistDisplay(artist);
     $('input').val('');
+
+    saveBopsAndHops();
+
 })
 
 
@@ -32,6 +36,11 @@ function drinkDisplay(alcohol, j) {
         drink = response.drinks[num].strDrink;
         $('#recipe' + j).children('h3').text(drink);
         var imgSrc = response.drinks[num].strDrinkThumb;
+            if (j === 0) {
+                $('#booze-picture').attr('src', imgSrc);
+            } else {
+                $('#recipe' + j).attr('value', imgSrc);
+            }
         $.ajax ({
             url: 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s=' + drink + '&list.php?i=list',
             method: 'GET'
@@ -77,12 +86,12 @@ $('#artist').on('submit', function(e) {
     $('input').val('');
 })
 
-/* IMPLEMENT WHEN ARTIST AND ALCOHOL ARE UNDER ONE BUTTON CLICK 
+// IMPLEMENT WHEN ARTIST AND ALCOHOL ARE UNDER ONE BUTTON CLICK 
 //Saving previous search to Local Storage
 function saveBopsAndHops() {
-    localStorage.setItem("currentAlcohol", JSONstringify(alcohol));
-    localStorage.setItem("currentArtist", JSONstringify(artist));
-}*/
+    localStorage.setItem("currentAlcohol", JSON.stringify(alcohol));
+    localStorage.setItem("currentArtist", JSON.stringify(artist));
+}
 
 
 // Audio DB function
@@ -112,14 +121,16 @@ function artistDisplay(artist) {
     });
 }
 
-/* Should be implemented when one button click submits both artist and alcohol - reloads local storage and runs function
+// Should be implemented when one button click submits both artist and alcohol - reloads local storage and runs function
 function reloadBopsAndHops() {
     var storedArtist = localStorage.getItem("currentArtist");
     var storedAlcohol = localStorage.getItem("currentAlcohol");
-    if (storedArtist !==  null && stored Alcohol !== null){
+    if (storedArtist !==  null && storedAlcohol !== null){
         alcohol = JSON.parse(storedAlcohol);
         artist = JSON.parse(storedArtist);
-        drinkDisplay();
-        artistDisplay();
+        for (i = 0; i < 4; i++) {
+            drinkDisplay(alcohol, i);
+        };
+        artistDisplay(artist);
     }
-}*/
+}
