@@ -49,6 +49,22 @@ function drinkDisplay(alcohol, j) {
     });
 }
 
+// Event Listener that swaps the info in the card with the main drink
+$('.uk-card').on('click', function(e) {
+    var cardImg = $(this).attr('value');
+    var cardh3 = $(this).children('h3').text();
+    var cardul = $(this).children('ul').html();
+
+    $(this).attr('value', $('#booze-picture').attr('src')  )
+    $(this).children('h3').text($('#recipe0').children('h3').text())
+    $(this).children('ul').html($('#recipe0').children('ul').html())
+
+    $('#booze-picture').attr('src', cardImg);
+    $('#recipe0').children('h3').text(cardh3);
+    $('#recipe0').children('ul').html(cardul);
+})
+
+
 // ==========================================
 // Artist
 
