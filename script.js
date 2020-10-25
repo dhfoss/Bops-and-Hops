@@ -64,6 +64,9 @@ function drinkDisplay(alcohol, j) {
                     }
                 }
         });
+    }).catch(function(){
+        drink = "This drink is not available";
+        $('#drinkID').text(drink);
     });
 }
 
@@ -130,6 +133,9 @@ function artistDisplay(artist) {
             // An <h3> tag with id="albumName" needs to be added below the Album Art img on the HTML
             $('#albumName').text(album);
         })
+    }).catch(function(){
+        album = "This artist is not available";
+        $('#albumName').text(album);
     });
 }
 
