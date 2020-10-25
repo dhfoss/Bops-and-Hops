@@ -17,6 +17,9 @@
 html {
     height: 100%;
     overflow: auto;
+    background: #454545 url('black3.jpg');
+    background-position: center;
+    background-size: cover;
 }
 
 body {
@@ -24,15 +27,12 @@ body {
     height: 100%;
     font: 13px/180% 'Work Sans', 'Helvetica', 'Arial', sans-serif;
     color: #efefef;
-    background: #454545 url('black3.jpg');
-    background-position: center;
-    background-size: cover;
 }
 
 .uk-navbar-container:not(.uk-navbar-transparent) {
     background: rgba(35, 35, 35, 0.9);
     padding: 20px; 
-    border-bottom: 1px solid #121212; 
+    border-bottom: 5px solid var(--gold); 
 }
 
 .uk-navbar-container a:link,
@@ -55,7 +55,8 @@ body {
 }
 
 .uk-card {
-    width: 30%;
+    flex: 1 auto;
+    margin: 20px; 
     min-height: 150px;
     background-color: var(--dark);
     outline: 1px solid #232323; 
@@ -84,13 +85,22 @@ body {
     margin: 10px; 
 }
 
-.uk-search-input input[type=search],
+input[type=text],
 input {
     background: transparent;
     color: #efefef; 
     border-bottom: 1px solid #efefef !important; 
-    max-width: 35%; 
-    padding: 8px 0;
+    width: 35%;  
+    padding: 8px;
+}
+
+form {
+    display: block; 
+    width: 100%;
+    box-sizing: border-box;
+    float: left;
+    clear: both; 
+    margin-top: 50px;
 }
 
 .uk-button-default {
@@ -137,3 +147,34 @@ input {
     -webkit-transform: scale(1);
     transform: scale(1);
     color: #efefef !important; }
+
+.uk-grid {
+    flex-flow: row wrap;
+}
+
+#artist-picture,
+#booze-picture {
+    width: 23rem;
+    height: 23rem;
+    object-fit: cover;
+}
+
+#booze-picture {
+    float: left; 
+    margin-right: 50px; 
+    clear: both; 
+}
+
+#drinkID li {
+    list-style-type: none;
+    margin-left: 50px;
+    font-size: 14px;
+}
+
+#drinkID li:before {
+    content: '☆';
+    margin-left: 50px;
+    margin-right: 10px; 
+    display: inline-block;
+    color: var(--gold); 
+}
