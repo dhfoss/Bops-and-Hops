@@ -3,11 +3,11 @@
 The Bops & Hops application is developed by the Illuminati Confirmed.
 
 Illuminati Confirmed Team Members
-Brian Smak
-Daniel Hawthorne-Foss
-Hannah Elliot
-Andrea Grant
-Danan Thomas
+Brian Smak (@Brian Smak)
+Daniel Hawthorne-Foss (@Daniel Hawthorne-Foss)
+Hannah Elliot (@Hanna Elliot)
+Andrea Grant (@Andrea Grant)
+Danan Thomas (@Dunkkid23)
 
 Motivation for Development
 The application is meant to give excitement to a user's "vibe & sip" experience and pair a good drink with good music. The idea being the Bops & Hops application can complete a user's thoughts for them.
