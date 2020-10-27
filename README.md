@@ -6,7 +6,7 @@ The Bops & Hops application is developed by the Illuminati Confirmed.
 ### Team Members  
 Brian Smak (@bjsmak)  
 Daniel Hawthorne-Foss (@dhfoss)  
-Hannah Elliot (@nova-codes)  
+Hannah Elliott (@nova-codes)  
 Andrea Grant (@aegrant08)  
 Danan Thomas (@dunkkid23)  
 
