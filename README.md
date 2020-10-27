@@ -3,20 +3,20 @@ https://dhfoss.github.io/Bops-and-Hops/
 
 The Bops & Hops application is developed by the Illuminati Confirmed.
 
-Team Members  
-Brian Smak (@Brian Smak)  
-Daniel Hawthorne-Foss (@Daniel Hawthorne-Foss)  
-Hannah Elliot (@Hanna Elliot)  
-Andrea Grant (@Andrea Grant)  
-Danan Thomas (@Dunkkid23)  
+### Team Members  
+Brian Smak (@bjsmak)  
+Daniel Hawthorne-Foss (@dhfoss)  
+Hannah Elliot (@nova-codes)  
+Andrea Grant (@aegrant08)  
+Danan Thomas (@dunkkid23)  
 
-Motivation for Development  
+### Motivation for Development  
 The application is meant to give excitement to a user's "vibe & sip" experience and pair a good drink with good music. The idea being the Bops & Hops application can complete a user's thoughts for them.
 
-Application Description  
+### Application Description  
 Bops & Hops is an application that aligns the user's favorite musical artist to a list of cocktails and beverages.
 
-Functionality  
+### Functionality  
 The user types in their artist and liquor of choice in the appropriate search forms. Non-alcoholic drinks are avaiable for those who do not drink alcohol. 
 
 ![Search Bars](/assets/screen-shots/1-Search-Bars.png?raw=true)
@@ -39,12 +39,12 @@ If the user closes the page, when they open it up again, their most recent searc
 
 ![Refresh Page](/assets/screen-shots/6-Refresh-Page.png?raw=true)
 
-Techonolgy & Framework  
+### Techonolgy & Framework  
 HMTL, CSS, JavaScript, JQuery, and AJAX
 
-New Techology Utilized  
+### New Techology Utilized  
 UIKit for HTML
 
-APIs Used  
+### APIs Used  
 Cocktail DB API (for calling drinks)  
 The Audio DB API (for calling artist albums)
