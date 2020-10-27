@@ -72,20 +72,23 @@ function drinkDisplay(alcohol, j) {
 
 // Event Listener that swaps the info in the card with the main drink
 $('.uk-card').on('click', function(e) {
-    var cardImg = $(this).attr('value');
-    var cardh3 = $(this).children('h3').text();
-    var cardul = $(this).children('ul').html();
-    var cardInstructions = $(this).attr('data');
+    if ($(this).children('h3').text() !== '' && $(this).children('h3').text() !== 'Drink 1' && $(this).children('h3').text() !== 'Drink 2' && $(this).children('h3').text() !== 'Drink 3') {
+        var cardImg = $(this).attr('value');
+        var cardh3 = $(this).children('h3').text();
+        var cardul = $(this).children('ul').html();
+        var cardInstructions = $(this).attr('data');
+    
+        $(this).attr('value', $('#booze-picture').attr('src'));
+        $(this).children('h3').text($('#recipe0').children('h3:last').text());
+        $(this).children('ul').html($('#recipe0').children('ul').html());
+        $(this).attr('data', $('#drinkInstructions').text());
+    
+        $('#booze-picture').attr('src', cardImg);
+        $('#recipe0').children('h3:last').text(cardh3);
+        $('#recipe0').children('ul').html(cardul);
+        $('#drinkInstructions').text(cardInstructions);
+    }
 
-    $(this).attr('value', $('#booze-picture').attr('src'));
-    $(this).children('h3').text($('#recipe0').children('h3:last').text());
-    $(this).children('ul').html($('#recipe0').children('ul').html());
-    $(this).attr('data', $('#drinkInstructions').text());
-
-    $('#booze-picture').attr('src', cardImg);
-    $('#recipe0').children('h3:last').text(cardh3);
-    $('#recipe0').children('ul').html(cardul);
-    $('#drinkInstructions').text(cardInstructions);
 });
 
 
